@@ -1,6 +1,12 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
 
+export const Items = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+`
+
 export const Action = styled.div`
   position: absolute;
   top: 0;
@@ -14,12 +20,8 @@ export const Action = styled.div`
   opacity: 0;
   transition: 0.5s ease;
 `
-export const Items = styled.ul`
-  display: flex;
-`
 
 export const Item = styled.li`
-  margin-right: 16px;
   position: relative;
 
   > img {
