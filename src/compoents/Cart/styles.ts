@@ -3,6 +3,7 @@ import fechar from '../../assets/images/fechar.png'
 import { colors } from '../../styles'
 import { TagContainer } from '../Tag/styles'
 import { ButtonContainer } from '../Button/styles'
+
 export const Overlay = styled.div`
   position: absolute;
   top: 0;
@@ -36,6 +37,13 @@ export const Sidebar = styled.aside`
   ${ButtonContainer} {
     max-width: 100%;
     width: 100%;
+  }
+
+  .empty-text {
+    font-size: 14px;
+    line-height: 22px;
+    color: ${colors.white};
+    text-align: center;
   }
 `
 export const Prices = styled.p`

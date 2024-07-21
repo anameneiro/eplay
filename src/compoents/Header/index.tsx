@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
+
+import * as S from './styles'
+
+import logo from '../../assets/images/logo.svg'
+import cartIcon from '../../assets/images/carrinho.svg'
+
 import { useDispatch, useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
 import { useState } from 'react'
-import * as S from './styles'
 import { open } from '../../store/reducers/cart'
-import logo from '../../assets/images/logo.svg'
-import carrinho from '../../assets/images/carrinho.svg'
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -27,7 +30,9 @@ const Header = () => {
             <span />
           </S.Hamburguer>
           <Link title="Clique aqui para ir até a página principal" to="/">
-            <img src={logo} alt="Logo da EPLAY" />
+            <h1>
+              <img src={logo} alt="Logo da EPLAY" />
+            </h1>
           </Link>
           <nav>
             <S.Links>
@@ -42,7 +47,7 @@ const Header = () => {
               <S.LinkItem>
                 <HashLink
                   title="Clique aqui para acessar a sessão de Em breve"
-                  to="/#comming-soon"
+                  to="/#coming-soon"
                 >
                   Em breve
                 </HashLink>
@@ -58,9 +63,9 @@ const Header = () => {
             </S.Links>
           </nav>
         </div>
-        <S.CartButton onClick={openCart}>
-          {items.length} <span>- produto(s)</span>
-          <img src={carrinho} alt="Carrinho" />
+        <S.CartButton role="button" onClick={openCart}>
+          {items.length} <span> - produto(s)</span>
+          <img src={cartIcon} alt="Carrinho" />
         </S.CartButton>
       </S.HeaderRow>
       <S.NavMobile className={isMenuOpen ? 'is-open' : ''}>
