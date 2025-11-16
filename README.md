@@ -11,7 +11,7 @@ Este repositório contém o código fonte do projeto Eplay, um website para comp
   
 ### Instalação
 
-1. Clone o repositório: `git clone https://github.com/your-username/eplay.git`
+1. Clone o repositório: `git clone https://github.com/anameneiro/eplay.git`
 2. Navegue até o diretório do projeto: `cd eplay`
 3. Instale as dependências: `npm install`
 
